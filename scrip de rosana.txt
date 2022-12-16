@@ -1,0 +1,273 @@
+import tkinter as tk
+import tkinter.font as tkFont
+
+class App:
+    def __init__(self, root):
+        #setting title
+        root.title("undefined")
+        #setting window size
+        width=600
+        height=500
+        screenwidth = root.winfo_screenwidth()
+        screenheight = root.winfo_screenheight()
+        alignstr = '%dx%d+%d+%d' % (width, height, (screenwidth - width) / 2, (screenheight - height) / 2)
+        root.geometry(alignstr)
+        root.resizable(width=False, height=False)
+
+        GButton_560=tk.Button(root)
+        GButton_560["bg"] = "#f0f0f0"
+        ft = tkFont.Font(family='Times',size=10)
+        GButton_560["font"] = ft
+        GButton_560["fg"] = "#000000"
+        GButton_560["justify"] = "center"
+        GButton_560["text"] = "cargar"
+        GButton_560.place(x=440,y=310,width=138,height=30)
+        GButton_560["command"] = self.GButton_560_command
+
+        GLabel_579=tk.Label(root)
+        ft = tkFont.Font(family='Times',size=10)
+        GLabel_579["font"] = ft
+        GLabel_579["fg"] = "#333333"
+        GLabel_579["justify"] = "center"
+        GLabel_579["text"] = "label"
+        GLabel_579.place(x=820,y=130,width=70,height=25)
+
+        GLabel_827=tk.Label(root)
+        ft = tkFont.Font(family='Times',size=10)
+        GLabel_827["font"] = ft
+        GLabel_827["fg"] = "#333333"
+        GLabel_827["justify"] = "center"
+        GLabel_827["text"] = "Buscar Nombre "
+        GLabel_827.place(x=10,y=90,width=113,height=30)
+
+        GLabel_542=tk.Label(root)
+        ft = tkFont.Font(family='Times',size=10)
+        GLabel_542["font"] = ft
+        GLabel_542["fg"] = "#333333"
+        GLabel_542["justify"] = "center"
+        GLabel_542["text"] = "Supermarket"
+        GLabel_542.place(x=200,y=0,width=70,height=25)
+
+        GLineEdit_199=tk.Entry(root)
+        GLineEdit_199["borderwidth"] = "1px"
+        ft = tkFont.Font(family='Times',size=10)
+        GLineEdit_199["font"] = ft
+        GLineEdit_199["fg"] = "#333333"
+        GLineEdit_199["justify"] = "center"
+        GLineEdit_199["text"] = ""
+        GLineEdit_199.place(x=140,y=90,width=151,height=30)
+
+        GLineEdit_730=tk.Entry(root)
+        GLineEdit_730["borderwidth"] = "1px"
+        ft = tkFont.Font(family='Times',size=10)
+        GLineEdit_730["font"] = ft
+        GLineEdit_730["fg"] = "#333333"
+        GLineEdit_730["justify"] = "center"
+        GLineEdit_730["text"] = ""
+        GLineEdit_730.place(x=20,y=130,width=409,height=50)
+
+        GLabel_323=tk.Label(root)
+        ft = tkFont.Font(family='Times',size=10)
+        GLabel_323["font"] = ft
+        GLabel_323["fg"] = "#333333"
+        GLabel_323["justify"] = "center"
+        GLabel_323["text"] = "Seleccionar producto para el pedido"
+        GLabel_323.place(x=50,y=30,width=257,height=31)
+
+        GButton_920=tk.Button(root)
+        GButton_920["bg"] = "#f0f0f0"
+        ft = tkFont.Font(family='Times',size=10)
+        GButton_920["font"] = ft
+        GButton_920["fg"] = "#000000"
+        GButton_920["justify"] = "center"
+        GButton_920["text"] = "Buscar"
+        GButton_920.place(x=360,y=90,width=70,height=25)
+        GButton_920["command"] = self.GButton_920_command
+
+        GLabel_99=tk.Label(root)
+        ft = tkFont.Font(family='Times',size=10)
+        GLabel_99["font"] = ft
+        GLabel_99["fg"] = "#333333"
+        GLabel_99["justify"] = "center"
+        GLabel_99["text"] = "Colocar su ID"
+        GLabel_99.place(x=10,y=180,width=93,height=30)
+
+        GLineEdit_618=tk.Entry(root)
+        GLineEdit_618["borderwidth"] = "1px"
+        ft = tkFont.Font(family='Times',size=10)
+        GLineEdit_618["font"] = ft
+        GLineEdit_618["fg"] = "#333333"
+        GLineEdit_618["justify"] = "center"
+        GLineEdit_618["text"] = ""
+        GLineEdit_618.place(x=20,y=210,width=105,height=30)
+
+        GLabel_384=tk.Label(root)
+        ft = tkFont.Font(family='Times',size=10)
+        GLabel_384["font"] = ft
+        GLabel_384["fg"] = "#333333"
+        GLabel_384["justify"] = "center"
+        GLabel_384["text"] = "Cantidad"
+        GLabel_384.place(x=170,y=180,width=70,height=25)
+
+        GLineEdit_888=tk.Entry(root)
+        GLineEdit_888["borderwidth"] = "1px"
+        ft = tkFont.Font(family='Times',size=10)
+        GLineEdit_888["font"] = ft
+        GLineEdit_888["fg"] = "#333333"
+        GLineEdit_888["justify"] = "center"
+        GLineEdit_888["text"] = ""
+        GLineEdit_888.place(x=160,y=210,width=123,height=30)
+
+        GLabel_7=tk.Label(root)
+        ft = tkFont.Font(family='Times',size=10)
+        GLabel_7["font"] = ft
+        GLabel_7["fg"] = "#333333"
+        GLabel_7["justify"] = "center"
+        GLabel_7["text"] = "Vista previa de pedido"
+        GLabel_7.place(x=90,y=240,width=203,height=30)
+
+        GLabel_982=tk.Label(root)
+        ft = tkFont.Font(family='Times',size=10)
+        GLabel_982["font"] = ft
+        GLabel_982["fg"] = "#333333"
+        GLabel_982["justify"] = "center"
+        GLabel_982["text"] = "Nombre"
+        GLabel_982.place(x=0,y=270,width=70,height=25)
+
+        GLabel_964=tk.Label(root)
+        ft = tkFont.Font(family='Times',size=10)
+        GLabel_964["font"] = ft
+        GLabel_964["fg"] = "#333333"
+        GLabel_964["justify"] = "center"
+        GLabel_964["text"] = "----------"
+        GLabel_964.place(x=50,y=270,width=70,height=25)
+
+        GLabel_737=tk.Label(root)
+        ft = tkFont.Font(family='Times',size=10)
+        GLabel_737["font"] = ft
+        GLabel_737["fg"] = "#333333"
+        GLabel_737["justify"] = "center"
+        GLabel_737["text"] = "Marca"
+        GLabel_737.place(x=90,y=270,width=70,height=25)
+
+        GLabel_221=tk.Label(root)
+        ft = tkFont.Font(family='Times',size=10)
+        GLabel_221["font"] = ft
+        GLabel_221["fg"] = "#333333"
+        GLabel_221["justify"] = "center"
+        GLabel_221["text"] = "---------"
+        GLabel_221.place(x=140,y=270,width=70,height=25)
+
+        GLabel_105=tk.Label(root)
+        ft = tkFont.Font(family='Times',size=10)
+        GLabel_105["font"] = ft
+        GLabel_105["fg"] = "#333333"
+        GLabel_105["justify"] = "center"
+        GLabel_105["text"] = "Precio"
+        GLabel_105.place(x=180,y=270,width=70,height=25)
+
+        GLabel_921=tk.Label(root)
+        ft = tkFont.Font(family='Times',size=10)
+        GLabel_921["font"] = ft
+        GLabel_921["fg"] = "#333333"
+        GLabel_921["justify"] = "center"
+        GLabel_921["text"] = "---------"
+        GLabel_921.place(x=230,y=270,width=70,height=25)
+
+        GLabel_752=tk.Label(root)
+        ft = tkFont.Font(family='Times',size=10)
+        GLabel_752["font"] = ft
+        GLabel_752["fg"] = "#333333"
+        GLabel_752["justify"] = "center"
+        GLabel_752["text"] = "cantidad"
+        GLabel_752.place(x=280,y=270,width=70,height=25)
+
+        GLabel_938=tk.Label(root)
+        ft = tkFont.Font(family='Times',size=10)
+        GLabel_938["font"] = ft
+        GLabel_938["fg"] = "#333333"
+        GLabel_938["justify"] = "center"
+        GLabel_938["text"] = "total"
+        GLabel_938.place(x=390,y=270,width=70,height=25)
+
+        GLabel_301=tk.Label(root)
+        ft = tkFont.Font(family='Times',size=10)
+        GLabel_301["font"] = ft
+        GLabel_301["fg"] = "#333333"
+        GLabel_301["justify"] = "center"
+        GLabel_301["text"] = "--------"
+        GLabel_301.place(x=340,y=270,width=70,height=25)
+
+        GLineEdit_801=tk.Entry(root)
+        GLineEdit_801["borderwidth"] = "1px"
+        ft = tkFont.Font(family='Times',size=10)
+        GLineEdit_801["font"] = ft
+        GLineEdit_801["fg"] = "#333333"
+        GLineEdit_801["justify"] = "center"
+        GLineEdit_801["text"] = ""
+        GLineEdit_801.place(x=20,y=310,width=399,height=38)
+
+        GLabel_547=tk.Label(root)
+        ft = tkFont.Font(family='Times',size=10)
+        GLabel_547["font"] = ft
+        GLabel_547["fg"] = "#333333"
+        GLabel_547["justify"] = "center"
+        GLabel_547["text"] = "Desea eliminar un producto ? colocar su nombre"
+        GLabel_547.place(x=40,y=350,width=369,height=30)
+
+        GLineEdit_26=tk.Entry(root)
+        GLineEdit_26["borderwidth"] = "1px"
+        ft = tkFont.Font(family='Times',size=10)
+        GLineEdit_26["font"] = ft
+        GLineEdit_26["fg"] = "#333333"
+        GLineEdit_26["justify"] = "center"
+        GLineEdit_26["text"] = ""
+        GLineEdit_26.place(x=30,y=390,width=70,height=25)
+
+        GButton_459=tk.Button(root)
+        GButton_459["bg"] = "#f0f0f0"
+        ft = tkFont.Font(family='Times',size=10)
+        GButton_459["font"] = ft
+        GButton_459["fg"] = "#000000"
+        GButton_459["justify"] = "center"
+        GButton_459["text"] = "Borrar"
+        GButton_459.place(x=150,y=390,width=70,height=25)
+        GButton_459["command"] = self.GButton_459_command
+
+        GLabel_116=tk.Label(root)
+        ft = tkFont.Font(family='Times',size=10)
+        GLabel_116["font"] = ft
+        GLabel_116["fg"] = "#333333"
+        GLabel_116["justify"] = "center"
+        GLabel_116["text"] = "Desea confirmar compra?"
+        GLabel_116.place(x=30,y=430,width=169,height=30)
+
+        GButton_698=tk.Button(root)
+        GButton_698["bg"] = "#f0f0f0"
+        ft = tkFont.Font(family='Times',size=10)
+        GButton_698["font"] = ft
+        GButton_698["fg"] = "#000000"
+        GButton_698["justify"] = "center"
+        GButton_698["text"] = "confirmar"
+        GButton_698.place(x=220,y=440,width=70,height=25)
+        GButton_698["command"] = self.GButton_698_command
+
+    def GButton_560_command(self):
+        print("command")
+
+
+    def GButton_920_command(self):
+        print("command")
+
+
+    def GButton_459_command(self):
+        print("command")
+
+
+    def GButton_698_command(self):
+        print("command")
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = App(root)
+    root.mainloop()
